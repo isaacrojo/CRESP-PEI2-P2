@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+}
+
+.login {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 1000px;
+}
+
+.img-container {
+    background-image: url('./img/arch.jpg');
+
+    background-size: cover;
+    background-position: right;
+}
+
+.form-container {
+    padding: 128px 64px;
+}
+
+.form-title {
+    margin-bottom: 120px;
+    font-family: sans-serif;  /* ideal para texto / frases cortas */
+    color: rgba(0, 0, 0, 0.80);
+    font-size: 28px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-label {
+    display: block;
+    font-family: sans-serif;
+    margin-bottom: 8px;
+    color: rgba(0, 0, 0, 0.70);
+    font-weight: 500;
+}
+
+.form-label.turn-red {
+    color: red;
+}
+
+.form-input {
+    display: block;
+    width: 80%;
+    border: 1px solid rgba(0, 0, 0, 0.40);
+    border-radius: 3px;
+    line-height: 25px;
+}
+.form-input.turn-red {
+    border: 2px solid rgba(233, 0, 0, 0.788);
+
+}
+
+.forgot-link {
+    display: block;
+    margin-bottom: 40px;
+    text-decoration: none; /* link sin subralla*/
+    color: #0081A8;
+    font-family: sans-serif;
+}
+
+.form-submit-button {
+    width: 80%;
+    background-color: #F57C00;
+    color: white;
+    border: 1px solid black;
+    border-radius: 3px;
+    height: 30px;
+    margin: 30px 0;
+    cursor: pointer;
+}
+
+.form-submit-button:hover {
+    background-color: #f09133;
+}
+
+.form-submit-button:focus {
+    background-color: #c3690f;
+}
+
+.form-submit-button.disabled {
+    background-color: #3b2004;
+}
+
+.required-indicator {
+    color: red;
+}
+
+.message {
+    margin-top: 40px;
+    background-color: salmon;
+    border: 2px solid blueviolet;
+    font-family: sans-serif;
+    width: 80%;
+    display: none;
+
+}
+
+.message.visible { /* hacer visible o no el mensaje*/
+    display: block;
+}
+
+.message.info {
+    background-color: rgba(114, 230, 250, 0.747);
+    border: 2px solid blueviolet;
+}
+
+.message.danger {
+    background-color: salmon;
+    border: 2px solid blueviolet;
+}
+.message > p {
+    margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+
+    .login {
+        grid-template-columns: 1fr;
+        height: 1vh;
+    }
+
+    .img-container {
+        display: none;
+    }
+
+    .form-input {
+        width: 100%;
+    }
+
+    .form-submit-button {
+        width: 100%;
+    }
+    .message {
+        width: 100%;
+    }
+}
